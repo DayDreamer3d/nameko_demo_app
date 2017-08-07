@@ -31,8 +31,8 @@ Use ``nameko run db_service log_service route_service`` to start these services.
 Working
 -------
 
-.. image:: ./_static/demo-app.png
-
+.. image:: demo-app.png
+	:alt: demo app image
 #. Client will send a ``GET`` http request through ``localhost:8000``.
 #. ``http_route_service`` will receive this request and sends an rpc request to RabbitMQ.
 #. Broker will route this message to ``database_service`` to get the records from persistent store.
