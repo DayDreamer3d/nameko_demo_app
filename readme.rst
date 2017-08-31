@@ -33,6 +33,7 @@ Working
 
 .. image:: demo-app.png
 	:alt: demo app image
+
 #. Client will send a ``GET`` http request through ``localhost:8000``.
 #. ``http_route_service`` will receive this request and sends an rpc request to RabbitMQ.
 #. Broker will route this message to ``database_service`` to get the records from persistent store.
@@ -41,4 +42,13 @@ Working
 #. Event message will get routed to ``log_service`` which writes this message to a file.
 #. Finally, ``http_route_service`` returns the http response with html.
 
+
+More
+----
+
+I've created a `sample app`_ with few of `nameko extensions`_ which extends these principles. 
+
 |
+
+.. _sample app: https://github.com/DayDreamer3d/nameko-extension-app
+.. _nameko extensions: http://nameko.readthedocs.io/en/stable/key_concepts.html#extensions
